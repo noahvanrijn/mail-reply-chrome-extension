@@ -4,7 +4,7 @@ const API_ENDPOINT = 'https://api.openai.com/v1/engines/davinci-codex/completion
 // Due to privacy reasons I have removed my API key. 
 // You can get your own key by signing up for OpenAI Codex here: https://openai.com/blog/openai-codex/
 // If you use your own key the code should work as an extension
-const OPENAI_API_KEY = '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'; 
+const OPENAI_API_KEY = ''; 
 
 // Create context menu item on page load for selected text
 chrome.runtime.onInstalled.addListener(function() {
