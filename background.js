@@ -1,10 +1,10 @@
 // Define OpenAI API endpoint and authentication headers
-const API_ENDPOINT = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+const API_ENDPOINT = 'https://api.openai.com/v1/completions';
 
 // Due to privacy reasons I have removed my API key. 
 // You can get your own key by signing up for OpenAI Codex here: https://openai.com/blog/openai-codex/
 // If you use your own key the code should work as an extension
-const OPENAI_API_KEY = ''; 
+const OPENAI_API_KEY = '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'; 
 
 // Create context menu item on page load for selected text
 chrome.runtime.onInstalled.addListener(function() {
@@ -26,7 +26,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
       console.log(selectedText)
       
       // Send request to OpenAI API to reply selected text
-      fetch('https://api.openai.com/v1/completions', {
+      fetch(API_ENDPOINT, {
 
           method: 'POST',
           headers: {
